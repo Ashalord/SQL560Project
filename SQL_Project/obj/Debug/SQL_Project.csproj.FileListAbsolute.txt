@@ -7,3 +7,12 @@ C:\Users\jacob\source\repos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.csproj
 C:\Users\jacob\source\repos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.exe
 C:\Users\jacob\source\repos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.pdb
 C:\Users\jacob\source\repos\SQL_Project\SQL_Project\obj\Debug\SQL_Project.Form1.resources
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\bin\Debug\SQL_Project.exe.config
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\bin\Debug\SQL_Project.exe
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\bin\Debug\SQL_Project.pdb
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.csprojAssemblyReference.cache
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.Form1.resources
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.Properties.Resources.resources
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.csproj.GenerateResource.cache
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.exe
+C:\Users\jacob\source\repos\SQL560Project\SQL_Project\obj\Debug\SQL_Project.pdb
