@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,17 @@ namespace SQL_Project
     {
         public Form1()
         {
+            CreateTablesScript cts = new CreateTablesScript();
+            cts.Drop_Tables();
+            cts.Create_Tables();
+            cts.Insert_Data();
             InitializeComponent();
         }
 
         private void TEST_BUTTON_Click(object sender, EventArgs e)
         {
-            CreateTablesScript.Drop_Tables();
-            CreateTablesScript.Create_Tables();
-            CreateTablesScript.Insert_Data();
+            SqlCommandExecutor SQL = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
+            SQL.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels", "InsertScript.sql"));
         }
     }
 }

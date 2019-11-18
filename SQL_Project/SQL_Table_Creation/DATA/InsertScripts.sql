@@ -9,9 +9,9 @@ Values(N'Manager',null, N'n',50000.00,N'Y'),
 
 
 
-INSERT INTO FoodNStuff.Employee (EmployeeName,StartDate,TerminationDate, JobTypeID) 
+INSERT INTO FoodNStuff.Employee (EmployeeName,StartDate,TerminationDate,JobTypeID) 
 VALUES ('Edan Bolton','2020-01-23 06:37:43','2018-12-28 22:39:09',5),('Dean Beasley','2020-09-15 01:46:21','2019-05-21 23:40:59',1),('Holmes Horn','2019-03-23 02:19:31','2019-09-26 22:25:19',1),('Herman Downs','2019-05-22 18:40:02','2019-12-25 00:49:36',2),('Damon Howell','2020-09-05 10:35:54','2019-03-28 20:24:20',2),('Hayden Dixon','2019-02-08 01:54:46','2019-11-28 05:00:44',2),('Wang Blake','2019-01-05 17:40:27','2020-02-23 02:30:09',2),('Laith Sargent','2019-03-26 15:07:23','2019-01-31 05:26:33',2),('Harlan Parrish','2020-08-02 11:09:06','2020-10-12 09:40:04',2),('Brett Hodges','2020-08-18 15:34:31','2018-11-23 13:31:38',3);
-INSERT INTO FoodNStuff.Employee (EmployeeName,StartDate,TerminationDate) 
+INSERT INTO FoodNStuff.Employee (EmployeeName,StartDate,TerminationDate,JobTypeID) 
 VALUES ('Orlando Burke','2020-02-02 23:36:57','2019-09-10 21:06:03',3),('Fritz Bowen','2020-03-20 13:47:26','2019-01-12 09:25:36',3),('Nehru Burke','2020-05-18 20:29:11','2020-01-08 01:23:50',3),('Dominic Macdonald','2019-08-03 18:59:41','2019-03-28 12:37:57',3),('Noah Byrd','2020-09-08 08:57:52','2019-08-30 09:33:45',3),('Dolan Jensen','2020-07-22 10:56:31','2020-03-21 19:33:05',3),('Solomon Potts','2019-07-06 08:27:17','2018-12-08 08:40:05',4),('Russell Berry','2019-07-29 03:39:29','2019-05-02 13:46:45',4),('Anthony Hampton','2018-11-16 17:47:12','2018-11-13 22:27:37',4),('Zeus William','2019-11-18 19:03:20','2019-12-11 20:13:58',4);
 
 

@@ -1,83 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQL_Project.SQL_Table_Creation.DATA
 {
-    public static class CreateTablesScript
+    public class CreateTablesScript
     {
+        private string x = @"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels";
+        private SqlCommandExecutor cmd = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
         //Droping tables call
-        public static void Drop_Tables()
+        public void Drop_Tables()
         {
-            var fileContent = File.ReadAllText("DropTables.sql");
-            var sqlqueries = fileContent.Split(new[] { " GO " }, StringSplitOptions.RemoveEmptyEntries);
-
-            var con = new SqlConnection("connstring");
-            var cmd = new SqlCommand("query", con);
-            con.Open();
-            foreach (var query in sqlqueries)
-            {
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-            }
-            con.Close();
+            cmd.RunSqlCommand(Path.Combine(x, "DropTables.sql"));
         }
 
         //call to make all the sql tables
-        public static void Create_Tables()
+        public void Create_Tables()
         {
             string[] s = new string[7];
 
-            s[1] = "FoodNStuff.JobType";
-            s[2] = "FoodNStuff.Employee";
-            s[3] = "FoodNStuff.Customer";
-            s[4] = "FoodNStuff.Sales";
-            s[5] = "FoodNStuff.Product";
-            s[6] = "FoodNStuff.Inventory";
-            s[7] = "FoodNStuff.SaleItem";
+            s[0] = Path.Combine(x, "FoodNStuff.JobType.sql");
+            s[1] = Path.Combine(x, "FoodNStuff.Empyloyee.sql"); 
+            s[2] = Path.Combine(x, "FoodNStuff.Customer.sql"); 
+            s[3] = Path.Combine(x, "FoodNStuff.Sales.sql"); 
+            s[4] = Path.Combine(x, "FoodNStuff.Product.sql"); 
+            s[5] = Path.Combine(x, "FoodNStuff.Inventory.sql"); 
+            s[6] = Path.Combine(x, "FoodNStuff.SaleItem.sql");
 
-            foreach(string st in s)
+            foreach (string st in s)
             {
-                Make_Tables(st);
+                cmd.RunSqlCommand(st);
             }
         }
 
         //call to insert all the data
-        public static void Insert_Data()
+        public void Insert_Data()
         {
-            var fileContent = File.ReadAllText("InsertScripts.sql");
-            var sqlqueries = fileContent.Split(new[] { " GO " }, StringSplitOptions.RemoveEmptyEntries);
-
-            var con = new SqlConnection("connstring");
-            var cmd = new SqlCommand("query", con);
-            con.Open();
-            foreach (var query in sqlqueries)
-            {
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-            }
-            con.Close();
+            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\DATA", "InsertScripts.sql"));
         }
 
-        //creates the tables from the call create_tables()
-        private static void Make_Tables(string s)
-        {
-            var fileContent = File.ReadAllText(s + ".sql");
-            var sqlqueries = fileContent.Split(new[] { " GO " }, StringSplitOptions.RemoveEmptyEntries);
-
-            var con = new SqlConnection("connstring");
-            var cmd = new SqlCommand("query", con);
-            con.Open();
-            foreach (var query in sqlqueries)
-            {
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-            }
-            con.Close();
-        }
     }
 }
