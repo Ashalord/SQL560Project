@@ -26,7 +26,7 @@ namespace SQL_Project
         private void TEST_BUTTON_Click(object sender, EventArgs e)
         {
             SqlCommandExecutor SQL = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
-            SQL.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tables", "MakeSchema.sql"));
+            SQL.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels", "MakeSchema.sql"));
         }
     }
 }
