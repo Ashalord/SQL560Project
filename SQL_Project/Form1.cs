@@ -15,6 +15,7 @@ namespace SQL_Project
 {
     public partial class Form1 : Form
     {
+        string x = @"C: \Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels";
         SqlConnection con = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
         SqlDataAdapter da;
         DataSet ds;
@@ -30,7 +31,8 @@ namespace SQL_Project
 
         private void TEST_BUTTON_Click(object sender, EventArgs e)
         {
-            string query = "Select * From FoodNStuff.JobType";
+            //"Select * From FoodNStuff.JobType"
+            string query = File.ReadAllText(Path.Combine(x, "MakeSchema.sql"));
             da = new SqlDataAdapter(query, con);
             ds = new DataSet();
             da.Fill(ds);
