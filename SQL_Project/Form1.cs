@@ -42,9 +42,6 @@ namespace SQL_Project
             {
                 dataGridView.DataSource = ds.Tables[0];
             }
-
-            //SqlCommandExecutor SQL = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
-            //SQL.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels", "MakeSchema.sql"));
         }
     }
 }
