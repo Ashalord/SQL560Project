@@ -35,7 +35,7 @@
             // 
             // TEST_BUTTON
             // 
-            this.TEST_BUTTON.Location = new System.Drawing.Point(409, 12);
+            this.TEST_BUTTON.Location = new System.Drawing.Point(12, 490);
             this.TEST_BUTTON.Name = "TEST_BUTTON";
             this.TEST_BUTTON.Size = new System.Drawing.Size(113, 88);
             this.TEST_BUTTON.TabIndex = 0;
@@ -48,18 +48,18 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(381, 426);
+            this.dataGridView.Size = new System.Drawing.Size(1020, 426);
             this.dataGridView.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1044, 613);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.TEST_BUTTON);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Food and Stuff System";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 

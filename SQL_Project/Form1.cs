@@ -29,19 +29,24 @@ namespace SQL_Project
             InitializeComponent();
         }
 
-        private void TEST_BUTTON_Click(object sender, EventArgs e)
+        private void MakeQuery(string file)
         {
             //"Select * From FoodNStuff.JobType"
-            string query = File.ReadAllText(Path.Combine(x, "MakeSchema.sql"));
+            string query = File.ReadAllText(Path.Combine(x, file));
             da = new SqlDataAdapter(query, con);
             ds = new DataSet();
             da.Fill(ds);
             con.Close();
 
-            if(ds.Tables[0].Rows.Count != 0)
+            if (ds.Tables[0].Rows.Count != 0)
             {
                 dataGridView.DataSource = ds.Tables[0];
             }
+        }
+
+        private void TEST_BUTTON_Click(object sender, EventArgs e)
+        {
+            MakeQuery("MakeSchema.sql");
         }
     }
 }
