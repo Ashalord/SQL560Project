@@ -36,7 +36,19 @@ namespace SQL_Project.SQL_Table_Creation.DATA
         //call to insert all the data
         public void Insert_Data()
         {
-            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\DATA", "InsertScripts.sql"));
+            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "InsertScripts.sql"));
+        }
+
+        //drops the schema
+        public void Drop_Schema()
+        {
+            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "DropSchema.sql"));
+        }
+
+        //makes the schema
+        public void Make_Schema()
+        {
+            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "MakeSchema.sql"));
         }
 
     }

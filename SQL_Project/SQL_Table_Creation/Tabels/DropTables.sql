@@ -1,4 +1,4 @@
-﻿--create schema FoodNStuff;
+﻿--drops all of the tables
 
 DROP TABLE IF EXISTS FoodNStuff.SaleItem;
 DROP TABLE IF EXISTS FoodNStuff.InvenTory;

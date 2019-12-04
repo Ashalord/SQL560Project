@@ -1,4 +1,6 @@
-﻿IF OBJECT_ID(N'FoodNStuff.Employee') IS NULL
+﻿--creates the table for emplyee with the primary key of employee Id and a foreign key of Job type Id
+
+IF OBJECT_ID(N'FoodNStuff.Employee') IS NULL
 BEGIN
    create table FoodNStuff.Employee
 (

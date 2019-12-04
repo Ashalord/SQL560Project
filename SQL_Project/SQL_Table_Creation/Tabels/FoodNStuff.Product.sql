@@ -1,4 +1,6 @@
-﻿IF OBJECT_ID(N'FoodNStuff.Product') IS NULL
+﻿--makes the table of products with a primary key of product id and a unique key of product id
+
+IF OBJECT_ID(N'FoodNStuff.Product') IS NULL
 BEGIN
    create table FoodNStuff.Product(
 	ProductID int not null identity(1,1) primary key,

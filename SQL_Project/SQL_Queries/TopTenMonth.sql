@@ -1,4 +1,6 @@
-﻿WITH CTE(CustomerName, CustomerID, TotalPurchase)
+﻿--query that retuns the top 10% of customers for the year
+
+WITH CTE(CustomerName, CustomerID, TotalPurchase)
 
 AS (
 

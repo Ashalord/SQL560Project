@@ -1,4 +1,6 @@
-﻿WITH CTE(EmployeeName, EmployeeID, TotalSales) 
+﻿--query for the top employee of the year. returns the employee with the most sales for the year.
+
+WITH CTE(EmployeeName, EmployeeID, TotalSales) 
 
 AS (
 

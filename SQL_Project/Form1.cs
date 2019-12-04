@@ -15,23 +15,33 @@ namespace SQL_Project
 {
     public partial class Form1 : Form
     {
+        //string for where the queries are located
         string x = @"C: \Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Queries\";
+
         SqlConnection con = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
         SqlDataAdapter da;
         DataSet ds;
 
+        //recreates the whole database before the form is loaded
         public Form1()
         {
             CreateTablesScript cts = new CreateTablesScript();
             cts.Drop_Tables();
+            cts.Drop_Schema();
+            cts.Make_Schema();
             cts.Create_Tables();
             cts.Insert_Data();
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// reads the sql code from a file and makes the query with the given sql code
+        /// </summary>
+        /// <param name="file"> file name for the sql code </param>
+        /// <param name="vari"> the string that is read in from the textbox </param>
         private void MakeQueryVari(string file, string vari)
         {
-            //"Select * From FoodNStuff.JobType"
             string query = File.ReadAllText(Path.Combine(x, file));
             query = query.Replace("$", vari);
 
@@ -46,7 +56,7 @@ namespace SQL_Project
             }
         }
 
-
+        //on click takes in the date and returns what is expering on the day
         private void FoodExp_Click(object sender, EventArgs e)
         {
             if(TopEXP.Text == "")
@@ -61,6 +71,7 @@ namespace SQL_Project
             
         }
 
+        //on click takes in the year and returns the top employee for the year
         private void TopEmployee_Click(object sender, EventArgs e)
         {
             if (EmpYear.Text == "")
@@ -74,6 +85,7 @@ namespace SQL_Project
             }
         }
 
+        //on click takes in the product id and returns how much has been sold
         private void ProdMonth_Click(object sender, EventArgs e)
         {
                 if (ProductMonth.Text == "")
@@ -82,11 +94,12 @@ namespace SQL_Project
             }
             else
             {
-                MakeQueryVari("SalesForProductByMonth.sql", ProductMonth.Text);
+                MakeQueryVari("SalesForProduct.sql", ProductMonth.Text);
                 ProductMonth.Text = "";
             }
         }
 
+        //on click retuns the top custoemr for the month
         private void TopCustMonth_Click_1(object sender, EventArgs e)
         {
             if (TOPCUST.Text == "")

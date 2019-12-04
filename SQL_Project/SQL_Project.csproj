@@ -56,8 +56,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQL_Table_Creation\DATA\CreateTablesScript.cs" />
-    <Compile Include="SQL_Table_Creation\DATA\SqlCommandExecutor.cs" />
+    <Compile Include="SQL_Table_Creation\Data\CreateTablesScript.cs" />
+    <Compile Include="SQL_Table_Creation\Data\SqlCommandExecutor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,13 +83,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Back_End\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SQL_Queries\FoodExpOnDate.sql" />
-    <Content Include="SQL_Table_Creation\DATA\InsertScripts.sql" />
-    <Content Include="SQL_Queries\SalesForProductByMonth.sql" />
+    <Content Include="SQL_Table_Creation\Data\DropSchema.sql" />
+    <Content Include="SQL_Table_Creation\Data\InsertScripts.sql" />
+    <Content Include="SQL_Queries\SalesForProduct.sql" />
     <Content Include="SQL_Queries\TopEmployeeYear.sql" />
     <Content Include="SQL_Table_Creation\Tabels\DropTables.sql" />
     <Content Include="SQL_Table_Creation\Tabels\FoodNStuff.Product.sql" />
@@ -99,7 +98,7 @@
     <Content Include="SQL_Table_Creation\Tabels\FoodNStuff.JobType.sql" />
     <Content Include="SQL_Table_Creation\Tabels\FoodNStuff.Empyloyee.sql" />
     <Content Include="SQL_Table_Creation\Tabels\FoodNStuff.Customer.sql" />
-    <Content Include="SQL_Table_Creation\DATA\MakeSchema.sql" />
+    <Content Include="SQL_Table_Creation\Data\MakeSchema.sql" />
     <Content Include="SQL_Queries\TopTenMonth.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

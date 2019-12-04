@@ -1,4 +1,6 @@
-﻿IF OBJECT_ID(N'FoodNStuff.Customer') IS NULL
+﻿--creates the customer table wiht a primary key of CustomerId and a unique card number
+
+IF OBJECT_ID(N'FoodNStuff.Customer') IS NULL
 BEGIN
    Create table FoodNStuff.Customer(
 	CustomerID int not null identity(1,1) primary key,
