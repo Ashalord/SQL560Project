@@ -29,21 +29,6 @@ namespace SQL_Project
             InitializeComponent();
         }
 
-        private void MakeQuery(string file)
-        {
-            //"Select * From FoodNStuff.JobType"
-            string query = File.ReadAllText(Path.Combine(x, file));
-            da = new SqlDataAdapter(query, con);
-            ds = new DataSet();
-            da.Fill(ds);
-            con.Close();
-
-            if (ds.Tables[0].Rows.Count != 0)
-            {
-                dataGridView.DataSource = ds.Tables[0];
-            }
-        }
-
         private void MakeQueryVari(string file, string vari)
         {
             //"Select * From FoodNStuff.JobType"
@@ -60,18 +45,7 @@ namespace SQL_Project
                 dataGridView.DataSource = ds.Tables[0];
             }
         }
-        private void TEST_BUTTON_Click(object sender, EventArgs e)
-        {
-            if (TOPCUST.Text == "")
-            {
-                MessageBox.Show("ENTER A MONTH 1-12");
-            }
-            else
-            {
-                MakeQueryVari("TopTenMonth.sql", TOPCUST.Text);
-                TOPCUST.Text = "";
-            }
-        }
+
 
         private void FoodExp_Click(object sender, EventArgs e)
         {
@@ -110,6 +84,19 @@ namespace SQL_Project
             {
                 MakeQueryVari("SalesForProductByMonth.sql", ProductMonth.Text);
                 ProductMonth.Text = "";
+            }
+        }
+
+        private void TopCustMonth_Click_1(object sender, EventArgs e)
+        {
+            if (TOPCUST.Text == "")
+            {
+                MessageBox.Show("ENTER A MONTH 1-12");
+            }
+            else
+            {
+                MakeQueryVari("TopTenMonth.sql", TOPCUST.Text);
+                TOPCUST.Text = "";
             }
         }
     }

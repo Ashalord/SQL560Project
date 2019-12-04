@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TEST_BUTTON = new System.Windows.Forms.Button();
+            this.TopCustMonth = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.TopEmployee = new System.Windows.Forms.Button();
             this.TopEXP = new System.Windows.Forms.TextBox();
@@ -40,15 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // TEST_BUTTON
+            // TopCustMonth
             // 
-            this.TEST_BUTTON.Location = new System.Drawing.Point(295, 466);
-            this.TEST_BUTTON.Name = "TEST_BUTTON";
-            this.TEST_BUTTON.Size = new System.Drawing.Size(230, 88);
-            this.TEST_BUTTON.TabIndex = 0;
-            this.TEST_BUTTON.Text = "Top 10% Customers Of the Month";
-            this.TEST_BUTTON.UseVisualStyleBackColor = true;
-            this.TEST_BUTTON.Click += new System.EventHandler(this.TEST_BUTTON_Click);
+            this.TopCustMonth.Location = new System.Drawing.Point(295, 466);
+            this.TopCustMonth.Name = "TopCustMonth";
+            this.TopCustMonth.Size = new System.Drawing.Size(230, 88);
+            this.TopCustMonth.TabIndex = 0;
+            this.TopCustMonth.Text = "Top 10% Customers Of the Month";
+            this.TopCustMonth.UseVisualStyleBackColor = true;
+            this.TopCustMonth.Click += new System.EventHandler(this.TopCustMonth_Click_1);
             // 
             // dataGridView
             // 
@@ -129,7 +129,7 @@
             this.Controls.Add(this.TopEXP);
             this.Controls.Add(this.TopEmployee);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.TEST_BUTTON);
+            this.Controls.Add(this.TopCustMonth);
             this.Name = "Form1";
             this.Text = "Food and Stuff System";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -140,7 +140,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button TEST_BUTTON;
+        private System.Windows.Forms.Button TopCustMonth;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button TopEmployee;
         private System.Windows.Forms.TextBox TopEXP;
