@@ -30,16 +30,23 @@
         {
             this.TEST_BUTTON = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.TopEmployee = new System.Windows.Forms.Button();
+            this.TopEXP = new System.Windows.Forms.TextBox();
+            this.TOPCUST = new System.Windows.Forms.TextBox();
+            this.ProdMonth = new System.Windows.Forms.Button();
+            this.FoodExp = new System.Windows.Forms.Button();
+            this.EmpYear = new System.Windows.Forms.TextBox();
+            this.ProductMonth = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // TEST_BUTTON
             // 
-            this.TEST_BUTTON.Location = new System.Drawing.Point(12, 490);
+            this.TEST_BUTTON.Location = new System.Drawing.Point(295, 466);
             this.TEST_BUTTON.Name = "TEST_BUTTON";
-            this.TEST_BUTTON.Size = new System.Drawing.Size(113, 88);
+            this.TEST_BUTTON.Size = new System.Drawing.Size(230, 88);
             this.TEST_BUTTON.TabIndex = 0;
-            this.TEST_BUTTON.Text = "TEST";
+            this.TEST_BUTTON.Text = "Top 10% Customers Of the Month";
             this.TEST_BUTTON.UseVisualStyleBackColor = true;
             this.TEST_BUTTON.Click += new System.EventHandler(this.TEST_BUTTON_Click);
             // 
@@ -51,17 +58,83 @@
             this.dataGridView.Size = new System.Drawing.Size(1020, 426);
             this.dataGridView.TabIndex = 1;
             // 
+            // TopEmployee
+            // 
+            this.TopEmployee.Location = new System.Drawing.Point(548, 463);
+            this.TopEmployee.Name = "TopEmployee";
+            this.TopEmployee.Size = new System.Drawing.Size(230, 88);
+            this.TopEmployee.TabIndex = 2;
+            this.TopEmployee.Text = "Top Employee For The Year";
+            this.TopEmployee.UseVisualStyleBackColor = true;
+            this.TopEmployee.Click += new System.EventHandler(this.TopEmployee_Click);
+            // 
+            // TopEXP
+            // 
+            this.TopEXP.Location = new System.Drawing.Point(40, 560);
+            this.TopEXP.Name = "TopEXP";
+            this.TopEXP.Size = new System.Drawing.Size(230, 20);
+            this.TopEXP.TabIndex = 3;
+            // 
+            // TOPCUST
+            // 
+            this.TOPCUST.Location = new System.Drawing.Point(295, 560);
+            this.TOPCUST.Name = "TOPCUST";
+            this.TOPCUST.Size = new System.Drawing.Size(230, 20);
+            this.TOPCUST.TabIndex = 4;
+            // 
+            // ProdMonth
+            // 
+            this.ProdMonth.Location = new System.Drawing.Point(802, 463);
+            this.ProdMonth.Name = "ProdMonth";
+            this.ProdMonth.Size = new System.Drawing.Size(230, 88);
+            this.ProdMonth.TabIndex = 5;
+            this.ProdMonth.Text = "Total Sales  for a Product";
+            this.ProdMonth.UseVisualStyleBackColor = true;
+            this.ProdMonth.Click += new System.EventHandler(this.ProdMonth_Click);
+            // 
+            // FoodExp
+            // 
+            this.FoodExp.Location = new System.Drawing.Point(40, 466);
+            this.FoodExp.Name = "FoodExp";
+            this.FoodExp.Size = new System.Drawing.Size(230, 87);
+            this.FoodExp.TabIndex = 6;
+            this.FoodExp.Text = "Food Expering on Date";
+            this.FoodExp.UseVisualStyleBackColor = true;
+            this.FoodExp.Click += new System.EventHandler(this.FoodExp_Click);
+            // 
+            // EmpYear
+            // 
+            this.EmpYear.Location = new System.Drawing.Point(548, 558);
+            this.EmpYear.Name = "EmpYear";
+            this.EmpYear.Size = new System.Drawing.Size(230, 20);
+            this.EmpYear.TabIndex = 7;
+            // 
+            // ProductMonth
+            // 
+            this.ProductMonth.Location = new System.Drawing.Point(802, 558);
+            this.ProductMonth.Name = "ProductMonth";
+            this.ProductMonth.Size = new System.Drawing.Size(230, 20);
+            this.ProductMonth.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 613);
+            this.Controls.Add(this.ProductMonth);
+            this.Controls.Add(this.EmpYear);
+            this.Controls.Add(this.FoodExp);
+            this.Controls.Add(this.ProdMonth);
+            this.Controls.Add(this.TOPCUST);
+            this.Controls.Add(this.TopEXP);
+            this.Controls.Add(this.TopEmployee);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.TEST_BUTTON);
             this.Name = "Form1";
             this.Text = "Food and Stuff System";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +142,13 @@
 
         private System.Windows.Forms.Button TEST_BUTTON;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button TopEmployee;
+        private System.Windows.Forms.TextBox TopEXP;
+        private System.Windows.Forms.TextBox TOPCUST;
+        private System.Windows.Forms.Button ProdMonth;
+        private System.Windows.Forms.Button FoodExp;
+        private System.Windows.Forms.TextBox EmpYear;
+        private System.Windows.Forms.TextBox ProductMonth;
     }
 }
 
