@@ -42,13 +42,13 @@ namespace SQL_Project.SQL_Table_Creation.DATA
         //drops the schema
         public void Drop_Schema()
         {
-            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "DropSchema.sql"));
+            cmd.RunSqlCommand(Path.Combine(x, "DropSchema.sql"));
         }
 
         //makes the schema
         public void Make_Schema()
         {
-            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "MakeSchema.sql"));
+            cmd.RunSqlCommand(Path.Combine(x, "MakeSchema.sql"));
         }
 
     }

@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SQL_Project.SQL_Table_Creation.DATA;
 using System.Data.SqlClient;
+using SQL_Project.SQL_Table_Creation.DATA;
 
 namespace SQL_Project
 {
     public partial class Form1 : Form
     {
         //string for where the queries are located
-        string x = @"C: \Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Queries\";
+        string x = @"C: \Users\jacob\source\repos\SQL560Project\SQL_Project\Procedures\";
 
         SqlConnection con = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
         SqlDataAdapter da;
