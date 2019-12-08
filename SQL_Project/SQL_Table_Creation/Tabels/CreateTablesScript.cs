@@ -7,6 +7,7 @@ namespace SQL_Project.SQL_Table_Creation.DATA
     public class CreateTablesScript
     {
         private string x = @"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Tabels";
+        private string y = @"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data";
         private SqlCommandExecutor cmd = new SqlCommandExecutor(@"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;");
         //Droping tables call
         public void Drop_Tables()
@@ -36,7 +37,7 @@ namespace SQL_Project.SQL_Table_Creation.DATA
         //call to insert all the data
         public void Insert_Data()
         {
-            cmd.RunSqlCommand(Path.Combine(@"C:\Users\jacob\source\repos\SQL560Project\SQL_Project\SQL_Table_Creation\Data", "InsertScripts.sql"));
+            cmd.RunSqlCommand(Path.Combine(y, "InsertScripts.sql"));
         }
 
         //drops the schema
